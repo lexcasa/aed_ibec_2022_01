@@ -30,7 +30,8 @@ ALGORITMOS
         -> Input: [1,1,"B","B",2,1,true,true]
         -> Output: [1,"B",true]
 
-EJERCICIO C
+EJERCICIO C :
+
     Input: ["B","B", 1, 1, 1, 2, 2, 0] Output: [1, 0]
 
         1. Agrupar solo numeros que tengan una cantidad mayor a 2
@@ -44,5 +45,14 @@ EJERCICIO C
         -> Output me indica que 0 esta dentro del resultado por mas que no aparezca dos veces
             -> Si encuentra 0 o null lo agrega al output
     --- 
+
+
+CLASIFICACION
+
+    -> Apartar el output en tipos
+        Si en el input tengo mas de 1 tipo de dato diferente
+        -> El output va a ser la cantidad de estructuras a la cantidad de tipo de datos diferentes
+
+        -> Input: [1, "S", true] -> Output: [1], ["S"], [true]
 
 

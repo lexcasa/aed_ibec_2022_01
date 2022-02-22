@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1,2,"B","C","B"] // tipos: 2 
+        let z = []
+        let w = []
+
+        for (let i = 0; i < input.length; i++){
+            if(typeof input[i] === 'string'){
+                z.push( input[i] )
+            } else if(typeof input[i] === 'number'){
+                w.push( input[i] )
+            }
+        }
+        console.log(z, w)
+
+        // 
+        let compact = []
+        for(let i = 0; i < z.length; i++){
+            let count = 0
+            for (let j = 0; j < z.length; j++){
+                if(z[i] === z[j]){
+                    count++
+                }
+            }
+            if(count > 1 && !compact.includes(z[i])){
+                compact.push(z[i])
+            }
+        }
+        console.log(compact)
+    </script>
+</body>
+</html>
