@@ -1,0 +1,48 @@
+ALGORITMOS
+
+    -> Input [ A# ] -> Output
+
+    Dos tipos: 
+        -> Locales
+        -> Generales
+
+        Dado un problema:
+            -> Si el problema esta acotado al output dado estrictamente
+                -> Posiblemente podamos resolver con un algoritmo local
+            
+            -> Si el problema se puede deducir en una formula matematica (por ejemplo)
+                -> Necesariamente existe un algoritmo de solucion general
+            
+    
+    Input: 1,2,3,4 -> [ A1 ] -> 2,3,4,5
+    -> Para c/valor del input + 1 sera c/valor del output 
+
+        Input: [a1, a2, ..., aN] -> [ A1 ] -> Output: [a1+1, ..., aN+1]
+    
+    A1 (Local)
+        Input: 1,2,3,4 -> [ A1 (Local) ] -> 2,3,4,283
+
+        El algoritmo de A1 (local) resuelve el problema para los 3 primeros elementos del input
+    
+
+    EJEMPLO: 
+
+        -> Input: [1,1,"B","B",2,1,true,true]
+        -> Output: [1,"B",true]
+
+EJERCICIO C
+    Input: ["B","B", 1, 1, 1, 2, 2, 0] Output: [1, 0]
+
+        1. Agrupar solo numeros que tengan una cantidad mayor a 2
+        2. Agrupar valores nulos y/o 0
+
+    A# :
+        -> Agrupa solo numeros
+        -> Al encontrar un numero cuenta cantidad de veces > 2
+        -> 0 es un numero
+        -> null no es numero es un objeto
+        -> Output me indica que 0 esta dentro del resultado por mas que no aparezca dos veces
+            -> Si encuentra 0 o null lo agrega al output
+    --- 
+
+
