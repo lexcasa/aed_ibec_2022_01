@@ -1,0 +1,129 @@
+
+AED: 
+
+- Tres topicos: 
+    - Busquedas lineal
+    - Ordenacion
+    - Funciones matematicas
+
+- Prueba
+    -> dos o tres ejercicios
+---
+
+
+Algoritmo: 
+
+    -> Conjuntos de instrucciones logicas y ordenadas que dado un input genera un output
+
+    Input -> A1 -> Output
+
+    
+    A1: Algoritmo
+    
+        Dado un numero: 1 -> A1 -> 3
+
+        2 -> A1 -> 4
+        3 -> A1 -> 5
+        ...
+        N -> A1 -> N+2
+
+        Donde N es un numero natural
+    ---
+
+    Algoritmos: 
+    
+        - Resoluciones generales o completas
+        - Resoluciones locales
+
+    A1 *    -> Resuelve todos los inputs pertenecientes a los Naturales 
+    A1      -> Resuelve algunos inputs pertenecientes a los Naturales
+
+    
+    A1 *: Si le doy N -> A1 * -> N+2
+
+    A1: Resuelve el problema hasta que el numero sea menor que 67
+
+        2 -> A1 -> 4
+        ...
+        67 -> A1 -> 0
+
+    --- 
+
+    EJERCICIO RAPIDO I: Crear una funcion division entre dos numeros a y b
+    
+        -> dos numeros: a y b
+        -> a tiene que ser divisible por b
+        -> b no puede ser 0
+
+        A2: 
+            FUNCTION (a, b)
+
+                IF (b == 0)
+                    RETURN Error
+                ELSE
+                    RETURN a / b
+            ---
+
+    const division = funcion (a,b) {
+        if(b == 0){
+            return 'Error'
+        } else {
+            return a / b
+        }
+    }
+
+    EJERCICIO RAPIDO II: Quiero un algoritmo que me devuelva la suma de dos numeros
+        -> a y b tienen que ser estrictamente numerico
+        -> Si ingreso cualquier cosa en a y b que no sea numeros
+        -> Entonces devuelvo un error
+
+        A *: General
+        A L: Local
+
+        Solucion (A L) #1: 
+            FUNCTION (a, b)
+                RETURN a + b
+
+        Solucion (A L) #2: 
+            FUNCTION (a, b)
+                RETURN parseInt(a) + parseInt(b)
+
+        Solucion A *: 
+            FUNCTION (a, b){
+                IF TIPO de a y el TIPO de b son Numero
+                    RETURN a + b
+                ELSE
+                    RETURN 'Error'
+            }
+
+    const suma3 = function (a,b){ 
+        if(typeof a === 'number' && typeof b === 'number'){
+            return a + b
+        } else {
+            return 'Error'
+        }
+    }
+    
+    BUSQUEDA LINEAL
+
+        -> Algoritmo de agrupacion:
+            -> Input con elementos repetidos y filtrarlos a un output solo con los 
+            elementos unicos
+
+            [1,1,2] -> Cuales elementos estan repetidos?
+                elemento 1 dos veces
+            
+            [1,1,2] -> Filtro -> [1,1] -> [1]
+
+            [1,2,2,"B",2] -> Filtro -> [2,2,2] -> [2]
+
+            [1,1,"B","B",2,1] -> F: -> [1,1,1,"B","B"] -> [1,"B"]
+
+
+            ALGORITMO: 
+
+                -> Un elemento repetido dentro del input es aquel que encuentro mas de 1 vez
+                -> Un output auxiliar de elementos repetidos incluye a todos los items que 
+                que se encuentran mas de una vez en el input
+                -> Un output es el array de elementos agrupados
+                 

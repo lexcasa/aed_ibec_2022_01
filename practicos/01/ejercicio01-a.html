@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = [1,2,3,"A","A","B",2,2]
+        let output  = [] // [2, 'A']
+        let filtro  = []
+
+        // input[i] -> Esta dentro del input[1, ..., j]
+        // Si input[i] es igual a input[j] entonces esta dentro del input
+        // Contar cuantas veces el input de i esta dentro de input[1, ... , j]
+        for (let i = 0; i < input.length; i++){
+            let count = 0
+            for(let j = 0; j < input.length; j++){
+                if(input[i] === input[j]){
+                    count++
+                }
+            }
+            // Verifico si input[i] estaba previamente dentro del array
+            // 
+            if(count > 1 && !output.includes( input[i] )){
+                output.push( input[i] )
+            }
+        }
+        console.log("output: ", output)
+    </script>
+</body>
+</html>
