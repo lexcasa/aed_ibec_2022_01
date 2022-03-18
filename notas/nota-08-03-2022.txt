@@ -1,0 +1,161 @@
+EJERCICIOS:
+
+    FALTO: 
+        1.b
+        2.b
+    
+    VER EJERCICIO 3
+
+
+1.b: 
+
+    Input: [1, "B", "C", true, true, 1] 
+    Output: [true]
+    1. Agrupa booleanos
+
+
+    1. BUSQUEDA DE REPETIDOS
+
+        Input[i] -> Input[1, ..., j]
+
+        COMPARA: Input[i] === Input[j]
+            -> SUMO +1 (contador)
+
+    2. AGRUPAR: 
+        -> Al contador por elemento sea > 1
+        -> Y que el valor del Input[i] no exista en el output
+
+    3. CLASIFICACION 
+        -> Restriccion
+            VERIFICAR EL TYPEOF del Input[i]
+
+
+2.b
+
+    Input: [1,true,false,true,"C"]
+    Output: w: [1], z: [true,false,true], x: [null]
+
+    1. RECORRER EL INPUT Y CLASIFICAR
+
+        -> TYPES: number, boolean, string
+            -> number   : w --> Agrego al output Input[i]
+            -> boolean  : z --> Agrego al output Input[i]
+            -> string   : x --> Agrego al output un null en vez del Input[i]
+
+EJERCICIO 3: 
+
+    -> Busqueda normal
+
+        -> Comparar dos elementos A y B del mismo tipo
+        -> COMP: A (Op) B 
+
+        -> Input typof's: [boolean, string, number, ... ]
+        -> Flag typof: number
+
+        Tengo una funcion N ( ELEMENTO, TYPE )
+        COMP: N (A, TYPE_COMUN ) (Op) N(B, TYPE_COMUN) -> [True, False]
+
+        CASO: 
+
+        Input [el1, el2, ..., eli, ... elN]
+        
+        Todos los elementos menos eli son type : string
+        eli es type : number
+        
+        El flag es type : string
+
+        TYPE_COMUN depende del (Op) que elija 
+
+        Quiero verificar que los valores sean iguales 
+            -> Op: === 
+
+        COMP: A === B
+
+        Si A: 1 (number)
+        Si B: "1" (string)
+
+        A === B -> False
+
+        N (A, TYPE_COMUN) === N (B, TYPE_COMUN) -> True
+
+        TYPE_COMUN = string
+
+        N(A, String) === N(B, String)
+
+        N (ELEMENTO, String) = .toString()
+
+        COMP: A.toString() === B.toString()
+
+
+EJERCICIO 3. a 
+
+    Input: ["Aba","AAb","b","B"] 
+    Output: ["Aba","AAb"]
+
+    1. Encontrar N(E, TYPE_C)
+    2. Encontrar Operador
+    3. Encontrar el flag
+
+    1. Para el problema local todos los elementos del Input son strings, no es necesario N(E, TYPE_C)
+    2. Buscando el Flag 
+        
+        a. Fuerza bruta
+        b. Buscando coincidencias 
+
+        "B" x Input -> Existe un output posible ["Aba", "AAb"]
+        Si "B" esta dentro de Output[0], Output[1]
+
+        -> Pregunta: Mayusculas y minusculas se consideran en una igualdad? 
+
+        PROP: "B" == "b" -> False
+
+        FALSO: 
+
+            -> Se deduce "B" no puede ser flag de la busqueda
+
+        "b" x Input -> Existe un output posible ["Aba", "AAb"]
+        Si "b" esta dentro del Output[0], Output[1]
+
+        La solucion "b" x Input > Al tamanio del Output
+        Output "b" -> ["Aba", "AAb", "b"]
+
+        FALSO: 
+        
+            -> Se deduce que la solucion de "b" es mayor al output esperado
+        
+        "AAb" x Input
+        "Aba" x Input -> Existe un output posible ["Aba", "AAb"]
+
+        1. Cantidad de letras: A: 2, b: 1 -> Cumple
+        2. Keysensitive -> No cumple
+        3. Orden -> No cumple
+
+        "AAb" !== "Aba"
+
+        Output "AAb" o "Aba" es 1 < Es menor al output esperado
+        Output: ["AAb"] o ["Aba"]
+
+    2. Regla de coincidencias
+
+        -> Existe un flag que este dentro del output y dentro del input
+        -> Interseccion de los valores
+
+        "AAb" Intersect "Aba" -> "Ab" 
+
+        "Ab" x Input
+
+        const flag = "Ab"
+
+        "Ab" x Input -> Output ["AAb", "Aba"]
+
+        Op: .includes(x)
+        COMP: Input[i].includes(flag)
+
+
+        
+
+
+
+
+
+
