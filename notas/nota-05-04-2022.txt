@@ -1,0 +1,55 @@
+- EJERCICIO 1
+
+    -> Programa consume: Ram y CPU
+    -> Consume de forma simultanea
+
+    -> Suma de los programas multiplicando el uso de ram por el uso de cpu por el tiempo 
+        es Popt
+    
+    -> P1 = [r1, cpu1]
+
+    -> Array RAM [1,0.5,10]
+    -> Array CPU [1,0.8,11]
+
+        Popt: 
+            for i: 0 -> rams.length 
+
+                pOpt = rams[i] * cpus[i] * t
+
+    ===== 
+
+    -> Array RAM [1,0.5]
+    -> Array CPU [1,0.8,11]
+
+    Popt = 0
+
+    constante K = 10000
+    t = 10
+    count = 0
+
+    FOR j = 1 -> t 
+        count += Popt(rams, cpus, t)
+    
+        if(count > K)
+            -> dio error
+            -> paro el server
+        else 
+            -> sigue funcionando el servidor
+
+
+    EJERCICIO 02 
+        (0,n] -> const arr = [0, 1, 2, 3]
+        Donde:  
+        
+        -> La funcion f(x,y,z) es una funcion con tres parametros
+        -> const fxyz = funcion (x,y,z)
+        -> Dentro de fxyz tenemos 3 condiciones
+            
+            -> Resultado: x + y 
+                Si x es distinto de 0
+                y esta includio en el array [0,1,2,3]
+            
+            -> Resultado: z + 1 
+                Si z es 0 y distinto de 1
+
+            -> Resultado: 1/2 en el else

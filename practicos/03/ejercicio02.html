@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [0, 1, 2, 3]
+        const fxyz = function (x,y,z){
+            const cond1 = x !== 0 && arr.includes(x)
+            const cond2 = z === 0 && z !== 1
+
+            if(cond1){
+                return x + y
+            } else if (cond2){
+                return z + 1
+            } else {
+                return 1/2
+            }
+        }
+        console.log( fxyz(1, 10, 1) )
+        console.log( fxyz(5, 10, 0) )
+        console.log( fxyz(5, 10, 1) )
+    </script>
+</body>
+</html>
